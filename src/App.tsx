@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import Navbar from './components/navbar/Navbar'
 import { SelectedPage } from './shared/types'
+import Home from './pages/Home'
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(SelectedPage.Home)
@@ -25,6 +26,8 @@ function App() {
       onClick={() => (isTopOfPage ? console.log(window.scrollY, isTopOfPage) : console.log(window.scrollY))}
     >
       <Navbar isTopOfPage={isTopOfPage} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+      <Home setSelectedPage={setSelectedPage} />
+      <Home setSelectedPage={setSelectedPage} />
     </div>
   )
 }
