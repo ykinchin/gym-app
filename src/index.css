@@ -12,4 +12,14 @@ body,
   width: 100%;
   font-family: 'DM Sans', sans-serif;
   @apply text-gray-500;
+  ::-webkit-scrollbar {
+    height: 10px;
+    width: 6px;
+    @apply bg-primary-300;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary-500;
+    -webkit-border-radius: 1ex;
+  }
 }
