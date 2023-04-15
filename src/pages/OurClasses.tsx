@@ -1,15 +1,17 @@
-import { ClassType, SelectedPage } from '../shared/types'
+import { motion } from 'framer-motion'
+
 import image1 from '../assets/image1.png'
 import image2 from '../assets/image2.png'
 import image3 from '../assets/image3.png'
 import image4 from '../assets/image4.png'
 import image5 from '../assets/image5.png'
 import image6 from '../assets/image6.png'
-import { motion } from 'framer-motion'
+
+import { IClassType, SelectedPage } from '../shared/types'
 import HeaderText from '../components/shared/headerText/HeaderText'
 import Class from '../components/class/Class'
 
-const classes: Array<ClassType> = [
+const classes: Array<IClassType> = [
   {
     name: 'Weight Training Classes',
     description:
@@ -74,7 +76,7 @@ const OurClasses = ({ setSelectedPage }: Props) => {
         </motion.div>
         <div className='custom-scroll mt-10 h-[353px] w-full overflow-x-auto overflow-y-hidden'>
           <ul className=' custom-scroll w-[2800px] whitespace-nowrap'>
-            {classes.map((item: ClassType, index) => (
+            {classes.map((item: IClassType, index) => (
               <Class key={`${item.name}-${index}`} name={item.name} description={item.description} image={item.image} />
             ))}
           </ul>

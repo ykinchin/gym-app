@@ -1,13 +1,15 @@
-import { SelectedPage } from '../shared/types'
-import useMediaQuery from '../hooks/useMediaQuery'
-import ActionButton from '../components/shared/actionButton/ActionButton'
+import { motion } from 'framer-motion'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
+
 import HomePageText from '../assets/HomePageText.png'
 import HomePageGraphic from '../assets/HomePageGraphic.png'
 import SponsorRedBull from '../assets/SponsorRedBull.png'
 import SponsorForbes from '../assets/SponsorForbes.png'
 import SponsorFortune from '../assets/SponsorFortune.png'
-import AnchorLink from 'react-anchor-link-smooth-scroll'
-import { motion } from 'framer-motion'
+
+import { SelectedPage } from '../shared/types'
+import ActionButton from '../components/shared/actionButton/ActionButton'
+import useMediaQuery from '../hooks/useMediaQuery'
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void

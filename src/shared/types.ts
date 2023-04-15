@@ -5,13 +5,13 @@ export enum SelectedPage {
   ContactUs = 'contactus',
 }
 
-export interface BenefitType {
+export interface IBenefitType {
   icon: JSX.Element
   title: string
   description: string
 }
 
-export interface ClassType {
+export interface IClassType {
   name: string
   description?: string
   image: string

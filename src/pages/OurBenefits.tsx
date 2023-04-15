@@ -1,12 +1,14 @@
-import { HomeModernIcon, UserGroupIcon, AcademicCapIcon } from '@heroicons/react/24/solid'
-import { BenefitType, SelectedPage } from '../shared/types'
 import { motion } from 'framer-motion'
+import { HomeModernIcon, UserGroupIcon, AcademicCapIcon } from '@heroicons/react/24/solid'
+
 import BenefitsPageGraphic from '../assets/BenefitsPageGraphic.png'
 import HeaderText from '../components/shared/headerText/HeaderText'
+
+import { IBenefitType, SelectedPage } from '../shared/types'
 import Benefit from '../components/benefit/Benefit'
 import ActionButton from '../components/shared/actionButton/ActionButton'
 
-const benefits: Array<BenefitType> = [
+const benefits: Array<IBenefitType> = [
   {
     icon: <HomeModernIcon className='h-6 w-6' />,
     title: 'State of the Art Facilities',
@@ -68,7 +70,7 @@ const OurBenefits = ({ setSelectedPage }: Props) => {
           viewport={{ once: true, amount: 0.5 }}
           variants={container}
         >
-          {benefits.map((benefit: BenefitType) => (
+          {benefits.map((benefit: IBenefitType) => (
             <Benefit
               key={benefit.title}
               icon={benefit.icon}
