@@ -59,7 +59,12 @@ const ContactUs = ({ setSelectedPage }: Props) => {
               visible: { opacity: 1, x: 0 },
             }}
           >
-            <form target='_blink' onSubmit={onSubmit} method='POST' action='https://formsubmit.co/ykinchyn@gmail.com'>
+            <form
+              target='_blink'
+              onSubmit={onSubmit}
+              method='POST'
+              action='https://formsubmit.co/5ca32cbbe9ff99cf6656d010131b80f8'
+            >
               <input
                 className={inputStyles}
                 type='text'
